@@ -119,7 +119,8 @@ public class FileHash extends CordovaPlugin {
 			for (int i = 0; i < mdbytes.length; i++) { sb.append(Integer.toString((mdbytes[i] & 0xff) + 0x100, 16).substring(1)); }
 			ret[0] = sb.toString();
 			System.out.println(sb.toString());
-			return "test";
+			ret[0] = "test";
+			return ret;
 			}
 		catch(Exception ex){
 			if(ex instanceof FileNotFoundException){
